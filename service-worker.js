@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Callum-Ross/personalwebsite-react/precache-manifest.ac391d0ce0f19abd344b05c9588e9b11.js"
+  "/Callum-Ross/personalwebsite-react/precache-manifest.03db24987a01aa39be4fd048985544f1.js"
 );
 
 self.addEventListener('message', (event) => {
