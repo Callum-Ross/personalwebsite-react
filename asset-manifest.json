@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Callum-Ross/personalwebsite-react/static/css/main.e0918363.chunk.css",
+    "main.js": "/Callum-Ross/personalwebsite-react/static/js/main.d1f6074c.chunk.js",
+    "main.js.map": "/Callum-Ross/personalwebsite-react/static/js/main.d1f6074c.chunk.js.map",
+    "runtime-main.js": "/Callum-Ross/personalwebsite-react/static/js/runtime-main.518a5ae9.js",
+    "runtime-main.js.map": "/Callum-Ross/personalwebsite-react/static/js/runtime-main.518a5ae9.js.map",
+    "static/css/2.531c5f94.chunk.css": "/Callum-Ross/personalwebsite-react/static/css/2.531c5f94.chunk.css",
+    "static/js/2.7d29acfa.chunk.js": "/Callum-Ross/personalwebsite-react/static/js/2.7d29acfa.chunk.js",
+    "static/js/2.7d29acfa.chunk.js.map": "/Callum-Ross/personalwebsite-react/static/js/2.7d29acfa.chunk.js.map",
+    "index.html": "/Callum-Ross/personalwebsite-react/index.html",
+    "precache-manifest.ac391d0ce0f19abd344b05c9588e9b11.js": "/Callum-Ross/personalwebsite-react/precache-manifest.ac391d0ce0f19abd344b05c9588e9b11.js",
+    "service-worker.js": "/Callum-Ross/personalwebsite-react/service-worker.js",
+    "static/css/2.531c5f94.chunk.css.map": "/Callum-Ross/personalwebsite-react/static/css/2.531c5f94.chunk.css.map",
+    "static/css/main.e0918363.chunk.css.map": "/Callum-Ross/personalwebsite-react/static/css/main.e0918363.chunk.css.map",
+    "static/js/2.7d29acfa.chunk.js.LICENSE.txt": "/Callum-Ross/personalwebsite-react/static/js/2.7d29acfa.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Callum-Ross/personalwebsite-react/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.518a5ae9.js",
+    "static/css/2.531c5f94.chunk.css",
+    "static/js/2.7d29acfa.chunk.js",
+    "static/css/main.e0918363.chunk.css",
+    "static/js/main.d1f6074c.chunk.js"
+  ]
+}
