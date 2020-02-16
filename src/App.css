@@ -27,7 +27,12 @@
   padding-top: 0.5em;
 }
 .link:hover {
-  color: green;
+  color: blue;
+  text-decoration: underline;
+
+}
+.link:click {
+  color: blue;
   text-decoration: underline;
 
 }
@@ -60,8 +65,18 @@
   text-align: center;
   padding-top: 1.5em;
   font-size: 1.1em;
-
+  
 }
+@keyframes moving {
+  from { opacity: 0}
+  to { opacity: 1}
+}
+.all{
+  position: relative;
+  -webkit-animation: moving 3s;
+  animation: moving 3s;
+}
+
 .img2{
   display:flex;
   justify-content: center;
@@ -106,6 +121,32 @@
   text-align: center;            
 }
 .img3{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+div.gallery {
+  margin: 5px;
+  position: flex;
+  border: 1px solid #ccc;
+  float: left;
+  width: 40em;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+.main{
   display:flex;
   justify-content: center;
   flex-direction: row;
