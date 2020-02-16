@@ -8,6 +8,14 @@ import {
 import "./App.css";
 
 function App() {
+  let last_known_scroll_position = 0;
+
+  window.addEventListener("scroll", function(e) {
+    last_known_scroll_position = window.scrollY;
+
+    console.log(last_known_scroll_position);
+  });
+
   return (
     <>
       <Router>
@@ -77,6 +85,9 @@ function App() {
               <Users />
             </Route>
             <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/">
               <Home />
             </Route>
           </Switch>
@@ -232,26 +243,32 @@ function Users() {
     <>
       <div className="all">
         <div className="main">
-          <div className="gallery">
-            <a href="https://github.com/Callum-Ross/cab432-assignment1">
-              <img
-                src="https://i.imgur.com/52Z7QOx.png"
-                alt="Cinque Terre"
-                width="600"
-                height="400"
-              />
-            </a>
+          <div className="gallery" id="first">
+            <img
+              src="https://i.imgur.com/52Z7QOx.png"
+              alt="Cinque Terre"
+              width="600"
+              height="400"
+            />
             <div className="desc">
               <h1>Points of interest/weather API Mashup</h1>
-              <br />
+              <div style={{ textAlign: "center" }}>
+                <a href="https://github.com/Callum-Ross">
+                  <img
+                    alt="github"
+                    id="github"
+                    style={{ paddingLeft: "0.5em", paddingRight: "0.5em" }}
+                    src="https://unpkg.com/simple-icons@latest/icons/github.svg"
+                  />
+                </a>
+              </div>
               Users would select a location on the map and be shown 10 POI's
               nearby.
               <br /> They could then find the weather forecast for each location
               by clicking on the pin on the map.
             </div>
           </div>
-
-          <div class="gallery">
+          <div class="gallery" id="second">
             <a target="_blank" href="img_forest.jpg">
               <img src="img_forest.jpg" alt="Forest" width="600" height="400" />
             </a>

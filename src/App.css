@@ -54,10 +54,8 @@
   margin-right: auto;
 }
 .App{
-  margin-left: 5%;
   margin-top: 1%;
   margin-bottom: 1%;
-  margin-right: 5%;
   font-family: 'Varela Round', sans-serif;
   background-color:white;
 }
@@ -131,6 +129,22 @@ div.gallery {
   border: 1px solid #ccc;
   float: left;
   width: 40em;
+
+  box-shadow: 5px 10px #888888;
+}
+@keyframes first {
+  from {right:15%; position: relative;}
+  to { right: -15%}
+}
+@keyframes second {
+  from {left:15%; position: relative;}
+  to { left: -15%}
+}
+#first{
+  animation: first 5s;
+}
+#second{
+  animation: second 5s;
 }
 
 div.gallery:hover {
@@ -147,7 +161,8 @@ div.desc {
   text-align: center;
 }
 .main{
-  display:flex;
+  animation: mainAn 3s;
   justify-content: center;
+  display:flex;
   flex-direction: row;
 }
