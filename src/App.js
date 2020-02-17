@@ -8,14 +8,7 @@ import {
 import "./App.css";
 
 function App() {
-  let last_known_scroll_position = 0;
-
-  window.addEventListener("scroll", function(e) {
-    last_known_scroll_position = window.scrollY;
-
-    console.log(last_known_scroll_position);
-  });
-
+  window.onscroll = function() {};
   return (
     <>
       <Router>
@@ -47,7 +40,13 @@ function App() {
               />
             </a>
           </div>
-          <nav>
+          <nav
+            style={{
+              position: "sticky",
+              top: "0%",
+              zIndex: 100000
+            }}
+          >
             <div className="nav">
               <div className="line" />
 
@@ -93,7 +92,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-      <footer id="footer"></footer>
     </>
   );
 }
@@ -115,6 +113,7 @@ function Home() {
           alt="shape"
         />
       </div>
+      <footer id="footer1"></footer>
     </>
   );
 }
@@ -134,7 +133,7 @@ function About() {
           <h2>Education</h2>Bachelor of IT (Computer Science) @ QUT third year
           <br />
           <p>
-            <span style={{ fontSize: "1.2em" }}>GPA:</span> 6.6
+            <span style={{ fontSize: "1.2em" }}>GPA:</span> 6.6/7
           </p>
           <p>
             Relevant coursework: Cloud Computing, Web Computing, Software
@@ -144,96 +143,150 @@ function About() {
           <h2>Skills</h2>
         </div>
         <div className="img3">
-          <figure>
-            <img
-              id="js"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/javascript.svg"
-              alt="JavaScipt"
-            />
-            <figcaption style={{ textAlign: "center" }}>JavaScipt</figcaption>
-          </figure>
+          <div className="category">
+            <h2 style={{ textAlign: "center" }}>Languages/Frameworks</h2>
+            <figure>
+              <img
+                id="js"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/javascript.svg"
+                alt="JavaScipt"
+              />
+              <figcaption style={{ textAlign: "center" }}>JavaScipt</figcaption>
+            </figure>
+            <figure>
+              <img
+                id="nodejs"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/node-dot-js.svg"
+                alt="nodejs"
+              />
+              <figcaption style={{ textAlign: "center" }}>NodeJS</figcaption>
+            </figure>
+            <figure>
+              <img
+                id="java"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/java.svg"
+                alt="java"
+              />
+              <figcaption style={{ textAlign: "center" }}>Java</figcaption>
+            </figure>
+            <figure>
+              <img
+                id="React"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/react.svg"
+                alt="React"
+              />
+              <figcaption style={{ textAlign: "center" }}>React</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              id="React"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/react.svg"
-              alt="React"
-            />{" "}
-            <figcaption style={{ textAlign: "center" }}>React</figcaption>
-          </figure>
+            <figure>
+              <img
+                id="Python"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/python.svg"
+                alt="Python"
+              />
+              <figcaption style={{ textAlign: "center" }}>Python</figcaption>
+            </figure>
+          </div>
 
-          <figure>
-            <img
-              id="Python"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/python.svg"
-              alt="Python"
-            />
-            <figcaption style={{ textAlign: "center" }}>Python</figcaption>
-          </figure>
+          <div className="category">
+            <h2 style={{ textAlign: "center" }}>Tools</h2>
+            <figure>
+              <img
+                id="Docker"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/docker.svg"
+                alt="Docker"
+              />
+              <figcaption style={{ textAlign: "center" }}>Docker</figcaption>
+            </figure>
+            <figure>
+              <img
+                id="aws"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/amazonaws.svg"
+                alt="aws"
+              />
+              <figcaption style={{ textAlign: "center" }}>AmazonAWS</figcaption>
+            </figure>
+            <figure>
+              <img
+                id="git"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/git.svg"
+                alt=".net"
+              />
+              <figcaption style={{ textAlign: "center" }}>Git</figcaption>
+            </figure>
+            <figure>
+              <img
+                id="SQL"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/mysql.svg"
+                alt="sql"
+              />
+              <figcaption style={{ textAlign: "center" }}>MySQL</figcaption>
+            </figure>
 
-          <figure>
-            <img
-              id="Docker"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/docker.svg"
-              alt="Docker"
-            />
-            <figcaption style={{ textAlign: "center" }}>Docker</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              id="aws"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/amazonaws.svg"
-              alt="aws"
-            />
-            <figcaption style={{ textAlign: "center" }}>AmazonAWS</figcaption>
-          </figure>
-          <figure>
-            <img
-              id="git"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/git.svg"
-              alt=".net"
-            />
-            <figcaption style={{ textAlign: "center" }}>Git</figcaption>
-          </figure>
-          <figure>
-            <img
-              id="SQL"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/mysql.svg"
-              alt="sql"
-            />
-            <figcaption style={{ textAlign: "center" }}>MySQL</figcaption>
-          </figure>
-          <figure>
-            <img
-              id="java"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/java.svg"
-              alt="java"
-            />
-            <figcaption style={{ textAlign: "center" }}>Java</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              id="tableau"
-              style={{ paddingLeft: "1em", paddingRight: "1em", width: "5em" }}
-              src="https://unpkg.com/simple-icons@2.4.0/icons/tableau.svg"
-              alt="tableau"
-            />
-            <figcaption style={{ textAlign: "center" }}>
-              Tableau and Alteryx
-            </figcaption>
-          </figure>
+            <figure>
+              <img
+                id="tableau"
+                style={{
+                  paddingLeft: "1em",
+                  paddingRight: "1em",
+                  width: "5em"
+                }}
+                src="https://unpkg.com/simple-icons@2.4.0/icons/tableau.svg"
+                alt="tableau"
+              />
+              <figcaption style={{ textAlign: "center" }}>
+                Tableau and Alteryx
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </div>
+      <footer id="footer"></footer>
     </>
   );
 }
@@ -276,6 +329,7 @@ function Users() {
           </div>
         </div>
       </div>
+      <footer id="footer1"></footer>
     </>
   );
 }
